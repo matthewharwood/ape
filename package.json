@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "node src/index.mjs",
-    "bundle": "cross-env microbundle src/components/hello.tsx -f cjs -o ./src/static/bundle.js --external none -w",
-    "start": "cross-env NODE_ENV=dev nodemon -r dotenv/config src/index.js",
+    "bundle": "cross-env microbundle src/components/_bundle.tsx -f cjs -o ./src/static/bundle.js --external none -w",
+    "start": "cross-env NODE_ENV=dev nodemon -r dotenv/config src/index.mjs",
     "start:prod": ""
   },
   "keywords": [],

@@ -1,13 +1,13 @@
-const express = require("express");
-const { PORT, CURRENT_DOMAIN } = require("./constants");
+import express from "express";
+import { PORT, CURRENT_DOMAIN } from "./constants.mjs";
 
-const render = require("preact-render-to-string");
-const { Fox } = require("./static/bundle");
+import render from "preact-render-to-string";
+import Block from "./static/bundle.js";
 
 const app = express();
 
 app.get("/", (req, res) => {
-  let html = render(Fox({ name: "hello" }));
+  let html = render(Block.Fox({ name: "hello" }));
   // send it back wrapped up as an HTML5 document:
   res.send(`<!DOCTYPE html><html><body>${html}</body></html>`);
 });

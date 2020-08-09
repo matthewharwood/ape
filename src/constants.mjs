@@ -1,4 +1,4 @@
-const env = require("dotenv");
+import env from "dotenv";
 
 env.config();
 
@@ -21,4 +21,4 @@ const APP_ENV = process.env.NODE_ENV;
 const CURRENT_DOMAIN = DOMAIN[APP_ENV];
 // TODO (sanity) add secret keys
 const SANITY_KEY = process.env.SANITY;
-module.exports = { ENV, PORT, DOMAIN, APP_ENV, CURRENT_DOMAIN, SANITY_KEY };
+export { ENV, PORT, DOMAIN, APP_ENV, CURRENT_DOMAIN, SANITY_KEY };
